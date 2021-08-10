@@ -19,14 +19,16 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<body class="hold-transition login-page">
-	<div class="card card-primary card-tabs">
+<body>
+	<div class="card  card-tabs">
               <div class="card-header p-0 pt-1">
                 <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist"> 
                   <li class="nav-item">
                     <a class="nav-link active" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="true">Register</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-one-Photo-tab" data-toggle="pill" href="#custom-tabs-one-Photo" role="tab" aria-controls="custom-tabs-one-Photo" aria-selected="false">Register 2</a>
                   </li>
-                  
                   <li class="nav-item">
                     <a class="nav-link" id="custom-tabs-one-settings-tab" data-toggle="pill" href="#custom-tabs-one-settings" role="tab" aria-controls="custom-tabs-one-settings" aria-selected="false">Download</a>
                   </li>
@@ -35,21 +37,25 @@
               <div class="card-body">
                 <div class="tab-content" id="custom-tabs-one-tabContent"> 
                   <div class="tab-pane fade active show" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
-                  	<form action="{{ url('store') }}" method="post" target="blnak">
+                  	<form action="{{ url('store') }}" method="post" target="_blank">
                   	{{csrf_field()}} 
                      <div class="row">
-                     	<div class="col-lg-3">
+                     	<div class="col-lg-4 form-group">
                      		<label>Name</label>
                      		<input type="text" name="name" class="form-control" maxlength="100"> 
                      	</div>
-                     	<p class="text-danger">{{ $errors->first('name') }}</p>
-                     	<div class="col-lg-3">
+                     	<div class="col-lg-4 form-group">
                      		<label>Father Name</label>
                      		<input type="text" name="father_name" class="form-control" maxlength="100"> 
                      	</div>
-                     	<p class="text-danger">{{ $errors->first('father_name') }}</p>
                      	
-                        <div class="col-md-6">
+                     	<div class="col-lg-4 form-group">
+                     		<label>Village</label>
+                     		<input type="text" name="Village" class="form-control" maxlength="100"> 
+                     	</div>
+                     	
+                     	
+                        <div class="col-md-6 form-group">
                             <div id="my_camera"></div>
                             <br/>
                             <input type=button value="Take Snapshot" onClick="take_snapshot()">
@@ -65,20 +71,48 @@
                   	</form>
                   </div> 
                   <div class="tab-pane fade" id="custom-tabs-one-settings" role="tabpanel" aria-labelledby="custom-tabs-one-settings-tab">
-                    <form action="{{ url('search') }}" method="post" success-content-id="ddddd" class="add_form">
+                    <form action="{{ url('download') }}" method="post" target="_blank">
                   	{{csrf_field()}}
                      	<div class="row">
                      	<div class="col-lg-12 form-group">
-                     		<label>Search</label>
-                     		<input type="text" name="search" class="form-control" maxlength="100">  
+                     		<label>Certificate No.</label>
+                     		<input type="text" name="certificate_no" class="form-control" maxlength="100">  
                      	</div> 
                      	<div class="col-lg-12 form-group"> 
-                     		<input type="submit"  class="form-control btn-primary btn" value="Search">  
+                     		<input type="submit"  class="form-control btn-primary btn" value="Download">  
                      	</div> 
                      	</div>
                      	<div id="ddddd">
                      		
                      	</div>
+                     </form>
+                  </div>
+                  <div class="tab-pane fade" id="custom-tabs-one-Photo" role="tabpanel" aria-labelledby="custom-tabs-one-Photo-tab">
+                    <form action="{{ url('register2') }}" method="post" target="_blank" enctype="multipart/form-data">
+                  	{{csrf_field()}}
+                     	<div class="row">
+                     	<div class="col-lg-12 form-group">
+                     		<label>Name</label>
+                     		<input type="text" name="name" class="form-control" maxlength="100">  
+                     	</div>
+                     	<div class="col-lg-12 form-group">
+                     		<label>Father Name</label>
+                     		<input type="text" name="father_name" class="form-control" maxlength="100">  
+                     	</div>
+                     	<div class="col-lg-12 form-group">
+                     		<label>Village</label>
+                     		<input type="text" name="village" class="form-control" maxlength="100">  
+                     	</div>
+                     	<div class="col-lg-12 form-group">
+                     		<label>Image</label>
+                     		<input type="file" name="image" class="form-control">  
+                     	</div> 
+                     	<div class="col-lg-12 form-group"> 
+                     		<input type="submit"  class="form-control btn-primary btn" value="Save And Download">  
+                     	</div> 
+                     	
+                     	</div>
+                     	
                      </form>
                   </div>
                 </div>
