@@ -35,12 +35,12 @@ dddd
  <!DOCTYPE html>
 <html>
 <head>
-	<title>Family Card Print</title>
+	<title>Certificate</title>
 </head>
 <style type="text/css">
 	@page{margin:0;}
 @php
-$backgroundImg =storage_path('app/background/f.jpeg');
+$backgroundImg =storage_path('app/background/n.jpg');
 @endphp
 	@page first{
 		background-image: url('{{ $backgroundImg }}');
@@ -54,12 +54,15 @@ $backgroundImg =storage_path('app/background/f.jpeg');
 div.first{
 	page:first;
 } 
+img {
+  border: 5px solid #555;
+}
 </style>
 <body>
 	<div class="first"> 
 		<div style="padding-top: 400px;margin-left: 100px">Certificate No. : <b>{{$UserDetail->id}}</b></div>
-		<div style="padding-top: 25px;margin-left: 400px"><b>{{$UserDetail->name}}</b></div> 
-		<div style="padding-top: 15px;margin-left: 200px"><b>{{$UserDetail->father_name}}</b></div> 
+		<div style="padding-top: 37px;margin-left: 400px"><b>{{$UserDetail->name}}</b></div> 
+		<div style="padding-top: 20px;margin-left: 200px"><b>{{$UserDetail->father_name}}</b></div> 
 		<div style="padding-top: -20px;margin-left: 500px"><b>{{$UserDetail->village}}</b></div> 
 	</div>
 	@php
@@ -67,7 +70,7 @@ div.first{
 		
 	@endphp
 	<div style="padding-top: 165px;margin-left: 120px">
-	<img src="{{ $image }}" alt="" width = "270px" height = "370px">
+	<img src="{{ $image }}" alt="" width = "270px">
 	</div>
 </body>
 </html>
