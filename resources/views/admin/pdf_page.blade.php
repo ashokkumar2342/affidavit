@@ -40,7 +40,7 @@ dddd
 <style type="text/css">
 	@page{margin:0;}
 @php
-$backgroundImg =storage_path('app/background/n.jpg');
+$backgroundImg =storage_path('app/background/nn.jpg');
 @endphp
 	@page first{
 		background-image: url('{{ $backgroundImg }}');
