@@ -120,7 +120,7 @@
               <!-- /.card -->
             </div> 
 </body>
-<script src="{{ asset('admin_asset/plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('admin_asset/plugins/jQuery/jquery.min.js') }}"></script>
 
 <!-- Bootstrap 4 -->
 <script src="{{ asset('admin_asset/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
