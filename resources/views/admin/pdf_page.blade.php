@@ -61,9 +61,9 @@ img {
 <body>
 	<div class="first"> 
 		<div style="padding-top: 400px;margin-left: 100px">Certificate No. : <b>{{$UserDetail->id}}</b></div>
-		<div style="padding-top: 37px;margin-left: 400px"><b>{{$UserDetail->name}}</b></div> 
-		<div style="padding-top: 20px;margin-left: 200px"><b>{{$UserDetail->father_name}}</b></div> 
-		<div style="padding-top: -20px;margin-left: 500px"><b>{{$UserDetail->village}}</b></div> 
+		<div style="padding-top: 28px;margin-left: 400px;font-size: 20px"><b>{{$UserDetail->name}}</b></div> 
+		<div style="padding-top: 18px;margin-left: 200px;font-size: 20px"><b>{{$UserDetail->father_name}}</b></div> 
+		<div style="padding-top: -26px;margin-left: 500px;font-size: 20px"><b>{{$UserDetail->village}}</b></div> 
 	</div>
 	@php
 		$image =storage_path('app'.$UserDetail->image);
