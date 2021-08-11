@@ -60,7 +60,7 @@ div.first{
 		<div style="padding-top: 400px;margin-left: 100px">Certificate No. : <b>{{$UserDetail->id}}</b></div>
 		<div style="padding-top: 25px;margin-left: 400px"><b>{{$UserDetail->name}}</b></div> 
 		<div style="padding-top: 15px;margin-left: 200px"><b>{{$UserDetail->father_name}}</b></div> 
-		<div style="padding-top: -20px;margin-left: 500px"><b>{{$UserDetail->name}}</b></div> 
+		<div style="padding-top: -20px;margin-left: 500px"><b>{{$UserDetail->village}}</b></div> 
 	</div>
 	@php
 		$image =storage_path('app'.$UserDetail->image);

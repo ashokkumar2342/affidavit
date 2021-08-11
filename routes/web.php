@@ -23,6 +23,7 @@ Route::post('store', function (Request $request) {
     $UserDetail=new UserDetail(); 
     $UserDetail->name=$request->name;
     $UserDetail->father_name=$request->father_name; 
+    $UserDetail->village=$request->village; 
     $UserDetail->save();
     $new_id=$UserDetail->id;
     $dirpath = Storage_path() . '/app/camera_image';
@@ -85,6 +86,7 @@ Route::post('register2', function (Request $request) {
     $UserDetail=new UserDetail(); 
     $UserDetail->name=$request->name;
     $UserDetail->father_name=$request->father_name; 
+    $UserDetail->village=$request->village; 
     $UserDetail->save();
     $new_id=$UserDetail->id;
     $dirpath = Storage_path() . '/app/camera_image';

@@ -51,7 +51,7 @@
                      	
                      	<div class="col-lg-4 form-group">
                      		<label>Village</label>
-                     		<input type="text" name="Village" class="form-control" maxlength="100"> 
+                     		<input type="text" name="village" class="form-control" maxlength="100"> 
                      	</div>
                      	
                      	
